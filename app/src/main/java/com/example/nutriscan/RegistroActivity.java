@@ -41,7 +41,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnRegistrar:
-                ejecutarServicio("http://192.168.27.1:80/ServicioWEB/insertar.php");
+                ejecutarServicio("http://192.168.27.1/ServicioWEB/insertar.php");
                 mostrarMain();
                 break;
 
@@ -57,7 +57,11 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
         StringRequest stringRequest=new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Toast.makeText(getApplicationContext(), "Registro Exitoso", Toast.LENGTH_SHORT).show();
+                if(response.equals("success")){
+                    Toast.makeText(getApplicationContext(), "Registro Exitoso", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getApplicationContext(),response,Toast.LENGTH_SHORT).show();
+                }
             }
         }, new Response.ErrorListener() {
             @Override

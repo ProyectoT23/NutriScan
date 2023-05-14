@@ -28,10 +28,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.306"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTelé" />
+        app:layout_constraintTop_toBottomOf="@+id/etTelefonoLogin" />
 
     <EditText
-        android:id="@+id/etPass"
+        android:id="@+id/etPasswordLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -53,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPass" />
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordLogin" />
 
     <TextView
         android:id="@+id/txtReg"
@@ -70,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnLog" />
 
     <EditText
-        android:id="@+id/etTelé"
+        android:id="@+id/etTelefonoLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
