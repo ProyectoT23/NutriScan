@@ -41,11 +41,13 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
         AlertDialog dialog = builder.create();
         dialog.show();
 
+        EditText etAlergia = findViewById(R.id.etAlergia);
+
         Button btnAdd = view.findViewById(R.id.btnAdd);
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Agregado",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Agregado" + etAlergia.getText().toString(),Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });
